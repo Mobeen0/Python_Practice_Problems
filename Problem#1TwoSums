@@ -1,0 +1,16 @@
+#Find the sum of 2 integers in a list that equal to the target and return their indexes
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ret_list = []
+        for first in range(0,len(nums)):
+            for second in range(0,len(nums)):
+                if (nums[first] + nums[second]== target and first != second):
+                    ret_list.append(first)
+                    ret_list.append(second)
+                    return ret_list 
